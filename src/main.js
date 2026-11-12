@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+import { chargerUtilisateur, chargerUtilisateurs } from "./charger.js";
 import {
     admis,
     classementParNote,
@@ -37,3 +38,17 @@ console.log("Liste après mise à jour :", etudiantsModifies);
 console.log(
     `Preuve mise à jour — objet différent : ${etudiantOriginal !== etudiantModifie}, ancienne note conservée : ${etudiantOriginal.note === noteOriginale}, nouvelle note : ${etudiantModifie.note}.`,
 );
+
+console.log("\n--- Partie E : appels à l’API ---");
+
+const utilisateurs = await chargerUtilisateurs(3);
+console.log("Succès — trois utilisateurs :", utilisateurs);
+
+const utilisateurInexistant = await chargerUtilisateur(99999);
+console.log("Utilisateur inexistant :", utilisateurInexistant);
+
+const utilisateurReseauEnErreur = await chargerUtilisateur(
+    3,
+    "https://hote-invalide.example",
+);
+console.log("Erreur réseau :", utilisateurReseauEnErreur);
