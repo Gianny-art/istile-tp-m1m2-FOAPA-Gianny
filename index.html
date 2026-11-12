@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Annuaire des étudiants de troisième année de l'ISTILE.">
+    <title>ISTILE Annuaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <h1>ISTILE Annuaire</h1>
+            <nav aria-label="Navigation principale">
+                <a href="#recherche">Recherche</a>
+                <a href="#etudiants">Étudiants</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="recherche" class="section" aria-labelledby="recherche-title">
+            <div class="section-heading">
+                <p class="eyebrow">Année universitaire · Niveau L3</p>
+                <h2 id="recherche-title">Rechercher un étudiant</h2>
+                <p>Retrouvez les étudiants inscrits dans les filières de l’ISTILE.</p>
+            </div>
+            <form class="search-form" role="search">
+                <label for="recherche-etudiant">Nom ou prénom</label>
+                <div class="search-controls">
+                    <input
+                        type="search"
+                        id="recherche-etudiant"
+                        name="recherche"
+                        placeholder="Ex. Aïcha Ngo"
+                    >
+                    <button type="button">Rechercher</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="etudiants" class="section" aria-labelledby="etudiants-title">
+            <div class="section-heading">
+                <p class="eyebrow">Annuaire</p>
+                <h2 id="etudiants-title">Les étudiants</h2>
+                <p>Découvrez les six premiers étudiants de l’annuaire.</p>
+            </div>
+            <div class="student-grid">
+                <article class="student-card">
+                    <h3>Aïcha Ngo</h3>
+                    <dl>
+                        <div>
+                            <dt>Filière</dt>
+                            <dd>Informatique</dd>
+                        </div>
+                        <div>
+                            <dt>Note</dt>
+                            <dd><data value="14">14/20</data></dd>
+                        </div>
+                    </dl>
+                </article>
+                <article class="student-card">
+                    <h3>Paul Tchinda</h3>
+                    <dl>
+                        <div>
+                            <dt>Filière</dt>
+                            <dd>Réseaux</dd>
+                        </div>
+                        <div>
+                            <dt>Note</dt>
+                            <dd><data value="9">9/20</data></dd>
+                        </div>
+                    </dl>
+                </article>
+                <article class="student-card">
+                    <h3>Marie Fotso</h3>
+                    <dl>
+                        <div>
+                            <dt>Filière</dt>
+                            <dd>Génie logiciel</dd>
+                        </div>
+                        <div>
+                            <dt>Note</dt>
+                            <dd><data value="16">16/20</data></dd>
+                        </div>
+                    </dl>
+                </article>
+                <article class="student-card">
+                    <h3>Christelle Nkou</h3>
+                    <dl>
+                        <div>
+                            <dt>Filière</dt>
+                            <dd>Informatique</dd>
+                        </div>
+                        <div>
+                            <dt>Note</dt>
+                            <dd><data value="11.5">11,5/20</data></dd>
+                        </div>
+                    </dl>
+                </article>
+                <article class="student-card">
+                    <h3>Brice Essomba</h3>
+                    <dl>
+                        <div>
+                            <dt>Filière</dt>
+                            <dd>Réseaux</dd>
+                        </div>
+                        <div>
+                            <dt>Note</dt>
+                            <dd><data value="7.5">7,5/20</data></dd>
+                        </div>
+                    </dl>
+                </article>
+                <article class="student-card">
+                    <h3>Linda Mvondo</h3>
+                    <dl>
+                        <div>
+                            <dt>Filière</dt>
+                            <dd>Génie logiciel</dd>
+                        </div>
+                        <div>
+                            <dt>Note</dt>
+                            <dd><data value="13">13/20</data></dd>
+                        </div>
+                    </dl>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+            <div class="section-heading">
+                <p class="eyebrow">Une question ?</p>
+                <h2 id="contact-title">Contact</h2>
+            </div>
+            <p>Pour toute question sur l’annuaire, écrivez-nous à <a href="mailto:contact@istile.cm">contact@istile.cm</a>.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>ISTILE · Annuaire des étudiants</p>
+        </div>
+    </footer>
+</body>
+</html>
