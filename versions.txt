@@ -1,0 +1,17 @@
+Exécution des commandes : 
+
+Node version : 24.22.1
+NPM version : 11.19.1
+git version : 2.56.0windows.2
+
+
+
+
+C:\Users\PROBOOK 450 G3>node -v
+v24.22.1
+
+C:\Users\PROBOOK 450 G3>npm -v
+11.19.1
+
+C:\Users\PROBOOK 450 G3>git --version
+git version 2.56.0.windows.2
