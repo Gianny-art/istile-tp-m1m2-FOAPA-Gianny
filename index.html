@@ -5,141 +5,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Annuaire des étudiants de troisième année de l'ISTILE.">
     <title>ISTILE Annuaire</title>
+    <link rel="icon" type="image/webp" href="assets/istile-logo.webp">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-content">
-            <h1>ISTILE Annuaire</h1>
-            <nav aria-label="Navigation principale">
-                <a href="#recherche">Recherche</a>
-                <a href="#etudiants">Étudiants</a>
-                <a href="#contact">Contact</a>
+            <a class="brand-lockup" href="#recherche" aria-label="ISTILE Annuaire, revenir à l’accueil">
+                <span class="brand-logo">
+                    <img src="assets/istile-logo.webp" alt="">
+                </span>
+                <span class="brand-copy">
+                    <h1>ISTILE Annuaire</h1>
+                    <span>Annuaire des étudiants · L3</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Navigation principale">
+                <a href="#recherche">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <circle cx="10.8" cy="10.8" r="6.3"></circle>
+                        <path d="m15.5 15.5 4.2 4.2"></path>
+                    </svg>
+                    <span>Recherche</span>
+                </a>
+                <a href="#etudiants">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <circle cx="9" cy="8" r="3"></circle>
+                        <path d="M3.5 19v-1.5a5.5 5.5 0 0 1 11 0V19zM16 5.3a3 3 0 0 1 0 5.5M17 14a5 5 0 0 1 3.5 4.8V19h-4"></path>
+                    </svg>
+                    <span>Étudiants</span>
+                </a>
+                <a href="#contact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                        <path d="m4 7 8 6 8-6"></path>
+                    </svg>
+                    <span>Contact</span>
+                </a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section id="recherche" class="section" aria-labelledby="recherche-title">
-            <div class="section-heading">
-                <p class="eyebrow">Année universitaire · Niveau L3</p>
-                <h2 id="recherche-title">Rechercher un étudiant</h2>
-                <p>Retrouvez les étudiants inscrits dans les filières de l’ISTILE.</p>
-            </div>
-            <form class="search-form" role="search">
-                <label for="recherche-etudiant">Nom ou prénom</label>
-                <div class="search-controls">
-                    <input
-                        type="search"
-                        id="recherche-etudiant"
-                        name="recherche"
-                        placeholder="Ex. Aïcha Ngo"
-                    >
-                    <button type="button">Rechercher</button>
+        <section id="recherche" class="section search-hero" aria-labelledby="recherche-title">
+            <div class="hero-copy">
+                <h2 id="recherche-title">Trouvez votre place dans la promotion.</h2>
+                <p>Explorez l’annuaire des étudiants de troisième année de l’ISTILE.</p>
+                <div class="hero-stats" aria-label="Annuaire des étudiants de niveau L3">
+                    <div>
+                        <strong>20</strong>
+                        <span>étudiants</span>
+                    </div>
+                    <div>
+                        <strong>3</strong>
+                        <span>filières</span>
+                    </div>
+                    <div>
+                        <strong>L3</strong>
+                        <span>niveau</span>
+                    </div>
                 </div>
-            </form>
+            </div>
+
+            <div class="search-panel">
+                <p class="search-panel-label">Annuaire étudiant</p>
+                <h3>Qui recherchez-vous&nbsp;?</h3>
+                <p>Entrez un nom ou un prénom pour retrouver un étudiant.</p>
+                <form class="search-form" role="search">
+                    <label for="recherche-etudiant">Nom ou prénom</label>
+                    <div class="search-controls">
+                        <input
+                            type="search"
+                            id="recherche-etudiant"
+                            name="recherche"
+                            placeholder="Ex. Aïcha Ngo"
+                        >
+                        <button type="button">Rechercher</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <section id="etudiants" class="section" aria-labelledby="etudiants-title">
-            <div class="section-heading">
-                <p class="eyebrow">Annuaire</p>
-                <h2 id="etudiants-title">Les étudiants</h2>
-                <p>Découvrez les six premiers étudiants de l’annuaire.</p>
+            <div class="section-heading student-section-heading">
+                <div>
+                    <p class="eyebrow">La communauté ISTILE</p>
+                    <h2 id="etudiants-title">Les étudiants</h2>
+                    <p>Découvrez les six premiers étudiants de l’annuaire.</p>
+                </div>
+                <span class="student-count">6 profils affichés</span>
             </div>
             <div class="student-grid">
                 <article class="student-card">
-                    <h3>Aïcha Ngo</h3>
-                    <dl>
-                        <div>
-                            <dt>Filière</dt>
-                            <dd>Informatique</dd>
+                    <div class="student-card-top">
+                        <span class="student-avatar" aria-hidden="true">AN</span>
+                        <div class="student-identity">
+                            <h3>Aïcha Ngo</h3>
+                            <span>Étudiante · L3</span>
                         </div>
-                        <div>
-                            <dt>Note</dt>
-                            <dd><data value="14">14/20</data></dd>
+                        <div class="student-grade">
+                            <span>Note</span>
+                            <data value="14">14<small>/20</small></data>
                         </div>
+                    </div>
+                    <dl class="student-details">
+                        <div><dt>Filière</dt><dd>Informatique</dd></div>
                     </dl>
                 </article>
                 <article class="student-card">
-                    <h3>Paul Tchinda</h3>
-                    <dl>
-                        <div>
-                            <dt>Filière</dt>
-                            <dd>Réseaux</dd>
+                    <div class="student-card-top">
+                        <span class="student-avatar" aria-hidden="true">PT</span>
+                        <div class="student-identity">
+                            <h3>Paul Tchinda</h3>
+                            <span>Étudiant · L3</span>
                         </div>
-                        <div>
-                            <dt>Note</dt>
-                            <dd><data value="9">9/20</data></dd>
+                        <div class="student-grade">
+                            <span>Note</span>
+                            <data value="9">9<small>/20</small></data>
                         </div>
+                    </div>
+                    <dl class="student-details">
+                        <div><dt>Filière</dt><dd>Réseaux</dd></div>
                     </dl>
                 </article>
                 <article class="student-card">
-                    <h3>Marie Fotso</h3>
-                    <dl>
-                        <div>
-                            <dt>Filière</dt>
-                            <dd>Génie logiciel</dd>
+                    <div class="student-card-top">
+                        <span class="student-avatar" aria-hidden="true">MF</span>
+                        <div class="student-identity">
+                            <h3>Marie Fotso</h3>
+                            <span>Étudiante · L3</span>
                         </div>
-                        <div>
-                            <dt>Note</dt>
-                            <dd><data value="16">16/20</data></dd>
+                        <div class="student-grade">
+                            <span>Note</span>
+                            <data value="16">16<small>/20</small></data>
                         </div>
+                    </div>
+                    <dl class="student-details">
+                        <div><dt>Filière</dt><dd>Génie logiciel</dd></div>
                     </dl>
                 </article>
                 <article class="student-card">
-                    <h3>Christelle Nkou</h3>
-                    <dl>
-                        <div>
-                            <dt>Filière</dt>
-                            <dd>Informatique</dd>
+                    <div class="student-card-top">
+                        <span class="student-avatar" aria-hidden="true">CN</span>
+                        <div class="student-identity">
+                            <h3>Christelle Nkou</h3>
+                            <span>Étudiante · L3</span>
                         </div>
-                        <div>
-                            <dt>Note</dt>
-                            <dd><data value="11.5">11,5/20</data></dd>
+                        <div class="student-grade">
+                            <span>Note</span>
+                            <data value="11.5">11,5<small>/20</small></data>
                         </div>
+                    </div>
+                    <dl class="student-details">
+                        <div><dt>Filière</dt><dd>Informatique</dd></div>
                     </dl>
                 </article>
                 <article class="student-card">
-                    <h3>Brice Essomba</h3>
-                    <dl>
-                        <div>
-                            <dt>Filière</dt>
-                            <dd>Réseaux</dd>
+                    <div class="student-card-top">
+                        <span class="student-avatar" aria-hidden="true">BE</span>
+                        <div class="student-identity">
+                            <h3>Brice Essomba</h3>
+                            <span>Étudiant · L3</span>
                         </div>
-                        <div>
-                            <dt>Note</dt>
-                            <dd><data value="7.5">7,5/20</data></dd>
+                        <div class="student-grade">
+                            <span>Note</span>
+                            <data value="7.5">7,5<small>/20</small></data>
                         </div>
+                    </div>
+                    <dl class="student-details">
+                        <div><dt>Filière</dt><dd>Réseaux</dd></div>
                     </dl>
                 </article>
                 <article class="student-card">
-                    <h3>Linda Mvondo</h3>
-                    <dl>
-                        <div>
-                            <dt>Filière</dt>
-                            <dd>Génie logiciel</dd>
+                    <div class="student-card-top">
+                        <span class="student-avatar" aria-hidden="true">LM</span>
+                        <div class="student-identity">
+                            <h3>Linda Mvondo</h3>
+                            <span>Étudiante · L3</span>
                         </div>
-                        <div>
-                            <dt>Note</dt>
-                            <dd><data value="13">13/20</data></dd>
+                        <div class="student-grade">
+                            <span>Note</span>
+                            <data value="13">13<small>/20</small></data>
                         </div>
+                    </div>
+                    <dl class="student-details">
+                        <div><dt>Filière</dt><dd>Génie logiciel</dd></div>
                     </dl>
                 </article>
             </div>
         </section>
 
         <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-            <div class="section-heading">
-                <p class="eyebrow">Une question ?</p>
-                <h2 id="contact-title">Contact</h2>
+            <div class="contact-copy">
+                <p class="eyebrow">Restons en contact</p>
+                <h2 id="contact-title">Une question&nbsp;?</h2>
+                <p>Le secrétariat de l’ISTILE est à votre écoute pour toute question sur l’annuaire.</p>
             </div>
-            <p>Pour toute question sur l’annuaire, écrivez-nous à <a href="mailto:contact@istile.cm">contact@istile.cm</a>.</p>
+            <a class="contact-link" href="mailto:contact@istile.cm">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="m4 7 8 6 8-6"></path>
+                </svg>
+                <span>contact@istile.cm</span>
+            </a>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>ISTILE · Annuaire des étudiants</p>
+            <p><span>ISTILE</span> · Annuaire des étudiants</p>
+            <a href="#recherche">Retour en haut ↑</a>
         </div>
     </footer>
 </body>
